@@ -73,6 +73,7 @@ function PokemonsPage() {
       {pokemons.map((pokemon) => {
         return (
           <article>
+            <img src={pokemon.img} alt="image du pokemon"></img>
             <h2> {pokemon.name} </h2>
           </article>
         );
