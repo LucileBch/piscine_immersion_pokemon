@@ -1,0 +1,22 @@
+.trainer-list {
+  flex-wrap: wrap;
+  display: flex;
+  margin-bottom: 150px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.trainer-article {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 300px;
+  }
+
+  h3 {
+    color: green;
+    text-transform: capitalize;
+  }
+}
