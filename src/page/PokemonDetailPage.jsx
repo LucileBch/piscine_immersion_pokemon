@@ -69,7 +69,7 @@ function PokemonDetailPage() {
   ];
 
   // je récupère l'id du pokemon cliqué dans l'url
-  //  je trouve dans le tableau le pokemon qui a l'id en question
+  // je trouve dans le tableau le pokemon qui a l'id en question
   // je l'affiche dans mon JSX
 
   const { pokemonId } = useParams();

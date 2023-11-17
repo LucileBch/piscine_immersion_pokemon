@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./page/HomePage";
 import PokemonsPage from "./page/PokemonsPage";
 import PokemonDetailPage from "./page/PokemonDetailPage";
+import TrainerDetailPage from "./page/TrainerDetailPage";
 
 function App() {
   return (
@@ -16,6 +17,10 @@ function App() {
           path="/pokemons/:pokemonId/details"
           element={<PokemonDetailPage />}
         />
+        <Route
+          path="/trainers/:trainerId/details"
+          element={<TrainerDetailPage />}
+        ></Route>
       </Routes>
     </BrowserRouter>
   );

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Header from "../componant/Header";
+import TeamList from "../componant/TeamList";
 
 import "./HomePage.scss";
 
@@ -96,6 +97,7 @@ function HomePage() {
           })}
         </div>
       </main>
+      <TeamList />
     </>
   );
 }
