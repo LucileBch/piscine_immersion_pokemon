@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Header from "../componant/Header";
 
+import "./HomePage.scss";
+
 function HomePage() {
   const pokemons = [
     {
@@ -78,17 +80,21 @@ function HomePage() {
     <>
       <Header />
       <main>
-        <h2>Voici la liste des pokemons faisant partie de la Team :</h2>
-        {pokemonsInTeam.map((pokemon) => {
-          return (
-            <Link to={`/pokemons/${pokemon.id}/details`}>
-              <article>
-                <img src={pokemon.img} alt={pokemon.name}></img>
-                <h3> {pokemon.name} </h3>
-              </article>
-            </Link>
-          );
-        })}
+        <h2 className="second-title">
+          Voici la liste des pokemons faisant partie de la Team :
+        </h2>
+        <div className="pokemon-list">
+          {pokemonsInTeam.map((pokemon) => {
+            return (
+              <Link to={`/pokemons/${pokemon.id}/details`}>
+                <article className="pokemon-article">
+                  <img src={pokemon.img} alt={pokemon.name}></img>
+                  <h3> {pokemon.name} </h3>
+                </article>
+              </Link>
+            );
+          })}
+        </div>
       </main>
     </>
   );

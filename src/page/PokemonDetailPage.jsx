@@ -81,11 +81,13 @@ function PokemonDetailPage() {
   return (
     <>
       <Header />
-      <h1>Détails sur le pokemon : </h1>
+      <h2 className="second-title">Détails sur le pokemon : </h2>
 
-      <h2>{pokemonToDisplay.name}</h2>
-      <img src={pokemonToDisplay.img} alt={pokemonToDisplay.name} />
-      <p>Ce pokemon est de type : {pokemonToDisplay.types.join(", ")}.</p>
+      <article className="pokemon-article">
+        <img src={pokemonToDisplay.img} alt={pokemonToDisplay.name} />
+        <h3>{pokemonToDisplay.name}</h3>
+        <p>Ce pokemon est de type : {pokemonToDisplay.types.join(", ")}.</p>
+      </article>
     </>
   );
 }

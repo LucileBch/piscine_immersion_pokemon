@@ -71,17 +71,19 @@ function PokemonsPage() {
   return (
     <>
       <Header />
-      <h2>Voici la liste de tous les pokemons :</h2>;
-      {pokemons.map((pokemon) => {
-        return (
-          <Link to={`/pokemons/${pokemon.id}/details`}>
-            <article>
-              <img src={pokemon.img} alt={pokemon.name}></img>
-              <h3> {pokemon.name} </h3>
-            </article>
-          </Link>
-        );
-      })}
+      <h2 className="second-title">Voici la liste de tous les pokemons :</h2>;
+      <div className="pokemon-list">
+        {pokemons.map((pokemon) => {
+          return (
+            <Link to={`/pokemons/${pokemon.id}/details`}>
+              <article className="pokemon-article">
+                <img src={pokemon.img} alt={pokemon.name}></img>
+                <h3> {pokemon.name} </h3>
+              </article>
+            </Link>
+          );
+        })}
+      </div>
     </>
   );
 }

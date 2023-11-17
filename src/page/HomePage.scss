@@ -1,0 +1,29 @@
+.second-title {
+  text-align: center;
+  font-size: 20px;
+  line-height: 2em;
+  font-family: cursive;
+}
+
+.pokemon-list {
+  flex-wrap: wrap;
+  display: flex;
+  margin-bottom: 150px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.pokemon-article {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 300px;
+  }
+
+  h3 {
+    color: green;
+    text-transform: capitalize;
+  }
+}
