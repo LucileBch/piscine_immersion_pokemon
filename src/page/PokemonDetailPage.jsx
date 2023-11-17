@@ -85,6 +85,7 @@ function PokemonDetailPage() {
 
       <h2>{pokemonToDisplay.name}</h2>
       <img src={pokemonToDisplay.img} alt={pokemonToDisplay.name} />
+      <p>Ce pokemon est de type : {pokemonToDisplay.types.join(", ")}.</p>
     </>
   );
 }

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "../componant/Header";
 
 function PokemonsPage() {
@@ -73,10 +74,12 @@ function PokemonsPage() {
       <h2>Voici la liste de tous les pokemons :</h2>;
       {pokemons.map((pokemon) => {
         return (
-          <article>
-            <img src={pokemon.img} alt={pokemon.name}></img>
-            <h3> {pokemon.name} </h3>
-          </article>
+          <Link to={`/pokemons/${pokemon.id}/details`}>
+            <article>
+              <img src={pokemon.img} alt={pokemon.name}></img>
+              <h3> {pokemon.name} </h3>
+            </article>
+          </Link>
         );
       })}
     </>
