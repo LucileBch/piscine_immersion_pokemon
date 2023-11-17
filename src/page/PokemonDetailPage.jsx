@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Header from "../componant/Header";
 
-function HomePage() {
+function PokemonDetailPage() {
   const pokemons = [
     {
       id: 1,
@@ -68,30 +68,25 @@ function HomePage() {
     },
   ];
 
-  const pokemonsInTeam = pokemons.filter((pokemon) => {
-    return pokemon.isInTeam == true;
+  // je récupère l'id du pokemon cliqué dans l'url
+  //  je trouve dans le tableau le pokemon qui a l'id en question
+  // je l'affiche dans mon JSX
+
+  const { pokemonId } = useParams();
+
+  const pokemonToDisplay = pokemons.find((pokemon) => {
+    return pokemon.id == pokemonId;
   });
 
   return (
-    // balise vide (= un fragement) pour entourer car ils ont besoin d'un parent
-    // Si pas besoin que le HTML consièdre une div, ou article... on utilise ce fragment
     <>
       <Header />
-      <main>
-        <h2>Voici la liste des pokemons faisant partie de la Team :</h2>
-        {pokemonsInTeam.map((pokemon) => {
-          return (
-            <Link to={`/pokemons/${pokemon.id}/details`}>
-              <article>
-                <img src={pokemon.img} alt={pokemon.name}></img>
-                <h3> {pokemon.name} </h3>
-              </article>
-            </Link>
-          );
-        })}
-      </main>
+      <h1>Détails sur le pokemon : </h1>
+
+      <h2>{pokemonToDisplay.name}</h2>
+      <img src={pokemonToDisplay.img} alt={pokemonToDisplay.name} />
     </>
   );
 }
 
-export default HomePage;
+export default PokemonDetailPage;
