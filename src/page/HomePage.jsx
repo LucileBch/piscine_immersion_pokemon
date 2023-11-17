@@ -77,11 +77,12 @@ function HomePage() {
     <>
       <Header />
       <main>
+        <h2>Voici la liste des pokemons faisant partie de la Team :</h2>
         {pokemonsInTeam.map((pokemon) => {
           return (
             <article>
               <img src={pokemon.img} alt={pokemon.name}></img>
-              <h2> {pokemon.name} </h2>
+              <h3> {pokemon.name} </h3>
             </article>
           );
         })}

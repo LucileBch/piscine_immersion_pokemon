@@ -70,11 +70,12 @@ function PokemonsPage() {
   return (
     <>
       <Header />
+      <h2>Voici la liste de tous les pokemons :</h2>;
       {pokemons.map((pokemon) => {
         return (
           <article>
             <img src={pokemon.img} alt={pokemon.name}></img>
-            <h2> {pokemon.name} </h2>
+            <h3> {pokemon.name} </h3>
           </article>
         );
       })}
